@@ -1,7 +1,7 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
-span {
+section {
     font-family: "Poppins", sans-serif;
 }
 .white-space {
@@ -15,4 +15,8 @@ span {
 
 .white-space-botttom{
     margin-bottom: 10%
+}
+
+.white-space-horizontal {
+    padding: 0px 10px;
 }

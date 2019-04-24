@@ -7,6 +7,8 @@ import { LoginComponent } from './routes/login/login.component';
 import { SignupComponent } from './routes/signup/signup.component';
 import { RouterModule } from '@angular/router';
 import { ProfileComponent } from './routes/profile/profile.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { ProfileComponent } from './routes/profile/profile.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
