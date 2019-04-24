@@ -1,6 +1,8 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import url('https://fonts.googleapis.com/css?family=Poppins');
-
-span {
+div {
     font-family: "Poppins", sans-serif;
+}
+.custom-line-height{
+    margin-top: 2rem !important;
 }

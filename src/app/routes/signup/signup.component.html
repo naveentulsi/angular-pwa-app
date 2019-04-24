@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <section>
+    <h2 class="row justify-content-center">
+      <blockquote style="color:#5538cb"> amazon </blockquote>
+    </h2>
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4 card shadow-lg bg-white border">
+        <div class="card-body formContent">
+          <h3 class="d-flex">Sign Up</h3>
+          <form>
+            <label class="form-label custom-line-height" for="username">First Name</label>
+            <input class="form-control" type="text" id="username" />
+            <label class="form-label custom-line-height" for="lastname">Last Name</label>
+            <input class="form-control" type="text" id="lastname" />
+            <label for="password" class="form-label custom-line-height">Password</label>
+            <input class="form-control" type="password" id="password" />
+            <div class="row justify-content-around custom-line-height">
+              <button type="submit" class="col-5 btn btn-primary">Sign Up</button>
+              <a [routerLink]="['/login']" class="col-5 btn btn-link">Login</a>
+              <small class="form-text text-muted align-self-end">Already have an account. Please click Login</small>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
