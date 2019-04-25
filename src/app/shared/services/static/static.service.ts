@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class StaticService {
 
-  static serverURL = 'http://localhost:8081/rest/';
+  static serverURL = 'http://localhost:8081/appy/api/usr/';
 
   constructor() { }
 
@@ -15,7 +15,7 @@ export class StaticService {
 
   public static getServerURLFor(URI: string): string {
     const usr = StaticService.serverURL;
-    const endPoint = usr.concat('/').concat(URI);
+    const endPoint = usr.concat(URI);
     return endPoint;
   }
 

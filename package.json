@@ -9,9 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "pbuild": "ng build --prod",
-    "shoot": "npm run build --watch && cd dist/angular-pwa-app && npx http-server -c-1",
-    "create": "ng g s shared/services/toast/toast",
-    "add": "npm i @angular/animations --save"
+    "shoot": "npm run build --watch && cd dist/angular-pwa-app && npx http-server -c-1"
   },
   "private": true,
   "dependencies": {

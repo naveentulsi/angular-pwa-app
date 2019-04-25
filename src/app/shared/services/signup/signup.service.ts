@@ -1,26 +1,26 @@
 import { Injectable } from '@angular/core';
-import { Userdata } from '../../interfaces/userdata';
-import { catchError } from 'rxjs/operators';
+import { Singupdata } from '../../interfaces/singupdata';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, Observer } from 'rxjs';
 import { StaticService } from '../static/static.service';
+import { catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService {
+export class SignupService {
 
   constructor(private _httpClient: HttpClient) { }
 
-  public login<T>(loginData: Userdata): Observable<T> {
+
+  signup<T>(signUpData: Singupdata): Observable<T> {
     const serverURL = StaticService.getServerURLFor('auth');
-    return this._httpClient.post(serverURL, loginData).pipe(
+    return this._httpClient.post(serverURL, signUpData).pipe(
       catchError((err: HttpErrorResponse, caught: Observable<any>) => {
         return Observable.create(function (fallback: Observer<string>) {
-          fallback.next('Unable to Login now.');
+          fallback.next('Unable to signup now.');
         });
       })
     );
   }
-
 }

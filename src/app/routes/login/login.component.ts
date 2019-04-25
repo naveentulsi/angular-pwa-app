@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  public login() {
+  async login() {
     console.log('inside login');
     const username = this.loginForm.controls.username.value;
     const password = this.loginForm.controls.password.value;
@@ -35,15 +35,15 @@ export class LoginComponent implements OnInit {
         if (response !== null && response !== undefined && response !== '') {
           this.toastService.showToasterSuccess(response);
           const msgString = String(response);
-          if (!msgString.includes('unable') || !msgString.includes('error')) {
+          if (!msgString.includes('Unable') && !msgString.includes('error')) {
             this.router.navigate(['/profile']);
           }
           console.log(response);
         }
       }, err => {
         this.toastService.showToasterError('Unable to process now.');
-        console.log('Error while reaching REST API.')
-      })
+        console.log('Error while reaching REST API.');
+      });
     } else {
       this.toastService.showToasterInfo('Please provide the input.');
     }
