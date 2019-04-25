@@ -18,9 +18,5 @@ export class AppComponent implements OnInit {
 
   title = 'angular-pwa-app';
   ngOnInit(): void {
-
-    //throw new Error('Method not implemented.');
   }
-
-
 }

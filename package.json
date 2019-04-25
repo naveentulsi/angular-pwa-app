@@ -9,7 +9,9 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "pbuild": "ng build --prod",
-    "shoot": "npm run pbuild && cd dist/angular-pwa-app && npx http-server -c-1"
+    "shoot": "npm run build --watch && cd dist/angular-pwa-app && npx http-server -c-1",
+    "create": "ng g s shared/services/toast/toast",
+    "add": "npm i @angular/animations --save"
   },
   "private": true,
   "dependencies": {
@@ -26,6 +28,7 @@
     "bootstrap": "4.3.1",
     "core-js": "^2.5.4",
     "http-server": "^0.11.1",
+    "ngx-toastr": "^10.0.2",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"

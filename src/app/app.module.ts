@@ -9,6 +9,9 @@ import { RouterModule } from '@angular/router';
 import { ProfileComponent } from './routes/profile/profile.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { ReactiveFormsModule, FormsModule } from "@angular/forms";
+import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,10 @@ import { environment } from '../environments/environment';
     BrowserModule,
     AppRoutingModule,
     RouterModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    ToastrModule.forRoot(),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
