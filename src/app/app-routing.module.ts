@@ -3,11 +3,13 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { LoginComponent } from './routes/login/login.component';
 import { SignupComponent } from './routes/signup/signup.component';
 import { ProfileComponent } from './routes/profile/profile.component';
+import { SuccessComponent } from './routes/success/success.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'profile', component: ProfileComponent },
+  { path: 'success', component: SuccessComponent },
   { path: '**', redirectTo: 'login' }
 ];
 

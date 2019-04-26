@@ -6,10 +6,10 @@
         <div class="card-body formContent">
           <h3 class="d-flex">Sign Up</h3>
           <form [formGroup]="signupForm"(ngSubmit)="signup()" >
-            <label class="form-label custom-line-height" for="lastName">First Name</label>
-            <input class="form-control" formControlName="firstName" type="text" id="lastname" />
-            <label class="form-label custom-line-height" for="firstName">Last Name</label>
-            <input class="form-control" formControlName="lastName" type="text" id="lastname" />
+            <label class="form-label custom-line-height" for="firstName">First Name</label>
+            <input class="form-control" formControlName="firstName" type="text" id="firstName" />
+            <label class="form-label custom-line-height" for="lastName">Last Name</label>
+            <input class="form-control" formControlName="lastName" type="text" id="lastName" />
             <label class="form-label custom-line-height" for="emailAddress">Email Address</label>
             <input class="form-control" formControlName="emailAddress" type="email" id="emailAddress" />
             <label for="password" class="form-label custom-line-height">Password</label>

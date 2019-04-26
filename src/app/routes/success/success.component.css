@@ -1,11 +1,5 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import url('https://fonts.googleapis.com/css?family=Poppins');
-section {
+div {
     font-family: "Poppins", sans-serif;
-}
-.custom-line-height{
-    margin-top: 2rem !important;
-}
-.hint-color{
-    color: orange;
 }

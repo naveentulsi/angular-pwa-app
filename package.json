@@ -9,7 +9,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "pbuild": "ng build --prod",
-    "shoot": "npm run build --watch && cd dist/angular-pwa-app && npx http-server -c-1"
+    "shoot": "npm run build --baseHref=/appy/ --prod && cd dist/angular-pwa-app && npx http-server /appy/ -c-1",
+    "boot": "npm run build --baseHref=/appy/ --prod"
   },
   "private": true,
   "dependencies": {

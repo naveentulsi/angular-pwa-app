@@ -13,12 +13,14 @@ import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SuccessComponent } from './routes/success/success.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignupComponent,
-    ProfileComponent
+    ProfileComponent,
+    SuccessComponent
   ],
   imports: [
     BrowserModule,

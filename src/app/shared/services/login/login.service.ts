@@ -14,7 +14,9 @@ export class LoginService {
 
   public login<T>(loginData: Userdata): Observable<T> {
     const serverURL = StaticService.getServerURLFor('auth');
-    return this._httpClient.post(serverURL, loginData).pipe(
+    return this._httpClient.post(serverURL, loginData, {
+      responseType: 'text'
+    }).pipe(
       catchError((err: HttpErrorResponse, caught: Observable<any>) => {
         return Observable.create(function (fallback: Observer<string>) {
           fallback.next('Unable to Login now.');

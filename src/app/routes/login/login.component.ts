@@ -15,8 +15,9 @@ export class LoginComponent implements OnInit {
     'username': ['', Validators.required],
     'password': ['', Validators.required]
   });
-  //formBuilder: FormBuilder;
-  constructor(private loginService: LoginService, private formBuilder: FormBuilder, private toastService: ToastService, private router: Router) {
+
+  constructor(private loginService: LoginService, private formBuilder: FormBuilder,
+    private toastService: ToastService, private router: Router) {
   }
 
   ngOnInit() {
@@ -33,10 +34,11 @@ export class LoginComponent implements OnInit {
         password: password
       }).subscribe((response) => {
         if (response !== null && response !== undefined && response !== '') {
-          this.toastService.showToasterSuccess(response);
           const msgString = String(response);
           if (!msgString.includes('Unable') && !msgString.includes('error')) {
             this.router.navigate(['/profile']);
+          } else {
+            this.toastService.showToasterError(String(response));
           }
           console.log(response);
         }
